@@ -8,7 +8,7 @@ print("step 2")
 app = Flask(__name__)
 print("step 3")
 
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key=os.environ.get("API_KEY"))
 print("step 4")
 
 conversation_history = {}
