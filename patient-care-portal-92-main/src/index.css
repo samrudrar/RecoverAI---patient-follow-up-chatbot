@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 215 40% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 40% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 40% 14%;
+
+    --primary: 213 74% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 60% 95%;
+    --secondary-foreground: 213 74% 46%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 170 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 213 74% 46%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 40% 7%;
+    --foreground: 210 40% 98%;
+    --card: 215 40% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 40% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 213 74% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 30% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 170 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 213 74% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-medical {
+    background: linear-gradient(135deg, hsl(213 74% 46%) 0%, hsl(200 80% 55%) 50%, hsl(170 60% 45%) 100%);
+  }
+
+  .gradient-medical-subtle {
+    background: linear-gradient(135deg, hsl(213 74% 46% / 0.05) 0%, hsl(170 60% 45% / 0.08) 100%);
+  }
+
+  .shadow-medical {
+    box-shadow: 0 10px 40px -12px hsl(213 74% 46% / 0.25);
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px hsl(215 40% 14% / 0.06), 0 4px 12px hsl(215 40% 14% / 0.04);
+  }
+}
